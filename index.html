@@ -1214,7 +1214,7 @@
         }
         /*# sourceMappingURL=extra.css.map */
     </style>
-    <title>♡♡♡</title>
+    <title>M ♡ X</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@700&display=swap" rel="stylesheet">
@@ -1498,7 +1498,7 @@
         </div>
     </div>
     <div class="textcontainer" style="z-index: 999; display:block">
-        <span class="particletext hearts" style="text-shadow: 0 0 90px rgb(107, 240, 255), 0 0 90px rgb(107, 240, 255), 0 0 10px rgb(107, 240, 255, .5); display: table-caption; font-size: 4rem;">Te amo con todo mi ser mi amada esposa ♡</span>
+        <span id="text-lov-editable" class="particletext hearts" style="text-shadow: 0 0 90px rgb(107, 240, 255), 0 0 90px rgb(107, 240, 255), 0 0 10px rgb(107, 240, 255, .5); display: table-caption; font-size: 2rem;"></span>
     </div>
     <script>
         jQuery.rnd = function (m, n) {
@@ -1513,6 +1513,82 @@
                 $(this).append('<span class="particle" style="top:' + $.rnd(20, 80) + '%; left:' + $.rnd(0, 95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0, 30) / 10) + 's;"></span>');
             }
         });
+
+        function generateRandomNumber(max, min) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        const text = document.getElementById('text-lov-editable');
+        const text_options = [
+            'Te amo con todo mi ser mi amada esposa',
+            'Te amo mas que a nada en este mundo',
+            'Eres la melodía que alegra mi corazón, la razón por la que sonrío cada día. Te amo más allá de las palabras, mi amor',
+            'En tu abrazo encuentro mi hogar, en tus ojos, mi refugio. Eres mi amor eterno, mi vida',
+            'Contigo descubrí un amor que trasciende el tiempo, un sentimiento que crece con cada latido de mi corazón',
+            'Eres la luz que ilumina mi oscuridad, la paz que calma mi tormenta interior. Te amo con una intensidad que no conoce límites',
+            'Cada día contigo es una página más de nuestro hermoso cuento de amor. Gracias por ser mi historia favorita',
+            'Eres la razón por la que mis días son más brillantes y mis noches más cálidas. Te amo más de lo que las palabras pueden expresar',
+            'En tus brazos, encuentro consuelo; en tus besos, la magia que da vida a mis sueños. Eres mi amor eterno',
+            'Contigo, el tiempo se detiene y el mundo desaparece. Eres mi presente, mi futuro y mi único deseo',
+            'Tus risas son mi canción favorita, tus abrazos, mi lugar seguro. Eres la melodía que siempre quiero escuchar',
+            'En cada mirada tuya, descubro un universo entero de amor. Eres la estrella que guía mi camino',
+            'Tu amor es la brisa que acaricia mi alma, la chispa que enciende mi corazón. Te amo más de lo que las estrellas pueden contar',
+            'En tus ojos encuentro la sinceridad de un amor puro, en tus labios, la promesa de un futuro juntos. Eres mi todo',
+            'Cada momento a tu lado es una joya preciosa en el collar de nuestra historia. Te amo más allá de las palabras, mi amor',
+            'Eres mi sol en los días nublados, mi faro en la oscuridad. Gracias por ser mi luz, mi amor',
+            'Tú y yo, unidos por un lazo indestructible. Eres mi compañera de vida, mi amor eterno',
+            'En tus abrazos encuentro la seguridad que anhelo, en tus besos, la pasión que enciende nuestra llama. Te amo con todo mi ser',
+            'Eres la razón por la que mis días tienen sentido, el sueño que nunca quiero despertar. Te amo más de lo que las palabras pueden expresar',
+            'Contigo, descubrí que el verdadero amor es un viaje eterno. Gracias por ser mi compañera de aventuras',
+            'Tú y yo, una historia escrita en las estrellas, un amor destinado a perdurar por siempre. Te amo más allá de la eternidad',
+            'Eres el sueño que nunca quiero dejar de tener, la realidad que siempre quiero abrazar. Te amo con todo mi corazón',
+            'En tu risa, encuentro la alegría que llena mi mundo. Eres mi razón para sonreír, mi amor eterno',
+            'Cada día a tu lado es una bendición, una oportunidad para amarte más. Gracias por ser mi amor, mi vida',
+            'Eres mi refugio en la tormenta, mi sol en los días grises. Te amo más de lo que las palabras pueden expresar',
+            'En tus ojos, descubro un océano de amor, en tus manos, la calidez que necesito. Eres mi amor eterno, mi confidenta',
+            'Tú y yo, unidos por un lazo que el tiempo nunca podrá romper. Te amo con una intensidad que crece cada día',
+            'En cada beso tuyo, siento la magia de nuestro amor. Eres mi inspiración, mi razón para creer en lo eterno',
+            'Eres mi amor en todas las formas posibles, en cada momento y en cada lugar. Te amo más allá de las palabras, mi amada',
+            'Contigo descubrí que el amor verdadero es paciente, es amable y nunca falla. Gracias por ser mi amor eterno',
+            'Eres la poesía que mi corazón escribe, la melodía que mi alma canta. Te amo con todo lo que soy, mi amor',
+            'En tus ojos, un cielo brillante, un amor que es mi faro constante',
+            'Tus labios, dulce melodía, en cada beso, mi poesía',
+            'Entre risas y suspiros, contigo, todos mis suspiros',
+            'Amor en versos entrelazados, nuestros corazones enamorados',
+            'Eres la luz en mi penumbra, en tu abrazo, mi fortuna',
+            'En tu mirada, un universo, mi amor por ti es sincero y terso',
+            'Como estrellas en la noche, nuestro amor, eterna derroche',
+            'Tus manos, mi refugio fiel, un lazo que nunca será cruel',
+            'En tu risa, la canción, nuestro amor, eterna bendición',
+            'Entre susurros y caricias, florece nuestra amorosa delicia',
+            'Eres la flor en mi jardín, cada pétalo, nuestro confín',
+            'En tus besos, fuego y calma,mi corazón late con tu alma',
+            'Amor, sencillo y profundo, como el mar, eterno segundo',
+            'Tus abrazos, mi abrigo, en tu amor, mi mayor castigo',
+            'Bajo el cielo estrellado, nuestro amor, eternamente amado',
+            'Eres mi sol en la aurora, en tu amor, mi eterna flora',
+            'En tus sueños, yo me pierdo, en tu amor, siempre me encuentro',
+            'Tus palabras, suaves caricias, en cada verso, nuestras delicias',
+            'Eres la luz de mi alborada, en tu amor, mi única morada',
+            'Como notas en una partitura, nuestro amor, eterna ternura',
+            'Eres capaz de superar cualquier desafío, porque la fuerza que llevas dentro es más grande que cualquier obstáculo',
+            'Tu valentía no conoce límites; eres la arquitecta de tu destino y la autora de tu historia',
+            'Cada día es una oportunidad para brillar, para demostrar al mundo la increíble mujer fuerte y decidida que eres',
+            'No hay límite para lo que puedes lograr. Tu determinación es la chispa que enciende el fuego del éxito',
+            'Eres una mujer única, con poderes extraordinarios. No hay nadie como tú, y eso es tu mayor fortaleza',
+            'Tus sueños son la brújula que guía tu camino. Sigue adelante con valentía y alcanzarás cada meta que te propongas',
+            'Cada desafío es una oportunidad para crecer. No temas a las dificultades; siembra coraje y cosecharás fortaleza',
+            'Eres como un diamante: fuerte, resistente y brillante. No permitas que nada apague tu resplandor',
+            'La verdadera belleza viene de dentro. Tu autenticidad y fortaleza son tus mejores atributos',
+            'Enfrenta tus miedos con la confianza de que cada paso te acerca a la mejor versión de ti misma',
+            'Nunca subestimes el poder de tu voz. Tu opinión y tus ideas tienen el potencial de cambiar el mundo',
+            'Eres la heroína de tu propia historia. Atrévete a escribir un capítulo lleno de coraje, amor y logros',
+            'La resiliencia es tu superpoder. Ante las adversidades, te levantas con más fuerza y ​​determinación',
+            'No hay límites para lo que puedes aprender y lograr. Tu sed de conocimiento es tu mayor aliado',
+            'Eres fuerte, inteligente y capaz de enfrentar cualquier reto. Cree en ti misma, porque el mundo necesita tu luz',
+        ];
+
+        text.innerText = text_options[generateRandomNumber(text_options.length - 1, 0)] + '♡';
     </script>
 </body>
 </html>

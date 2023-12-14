@@ -1579,7 +1579,7 @@
         text.innerText = text_options[generateRandomNumber(text_options.length - 1, 0)] + '♡';
 
         const css_extra_element = document.createElement('style');
-        css_extra_element.innerHTML = `body{filter:hue-rotate(${generateRandomNumber(150)}deg) saturate(1.3);}`;
+        css_extra_element.innerHTML = `body{filter:hue-rotate(${generateRandomNumber(360, 0)}deg) saturate(2);}`;
         document.body.appendChild(css_extra_element);
     </script>
 </body>
